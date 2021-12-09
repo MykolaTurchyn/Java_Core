@@ -1,17 +1,32 @@
 package part3;
 
+import java.util.Scanner;
+
 public class Engin {
     private String eng_model;
     private double volume;
     private int power;
 
-    public Engin() {
+    public void change_volume() {
+        System.out.println("Enter new volume for this car");
+        Scanner scanner = new Scanner(System.in);
+        double new_volume = Double.parseDouble(scanner.nextLine());
+        scanner.close();
+        this.setVolume(new_volume);
     }
 
     public Engin(String eng_model, double volume, int power) {
         this.eng_model = eng_model;
         this.volume = volume;
         this.power = power;
+    }
+
+    public String getEng_model() {
+        return eng_model;
+    }
+
+    public void setEng_model(String eng_model) {
+        this.eng_model = eng_model;
     }
 
     public String getModel() {

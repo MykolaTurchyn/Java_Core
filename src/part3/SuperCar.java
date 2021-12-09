@@ -1,10 +1,17 @@
 package part3;
 
+import java.util.Scanner;
+
 public class SuperCar {
     private String model;
     private String producer;
     private int year;
     private Engin engine;
+
+    public void change_volume(){
+        engine.change_volume();
+//        System.out.println("done");
+    }
 
     public SuperCar() {
     }
