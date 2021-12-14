@@ -1,23 +1,19 @@
 package demo2;
 
-import java.util.Iterator;
-import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
         TreeSet<User> users = new TreeSet<>();
-        users.add(new User(1,11, "Dima"));
-        users.add(new User(2,21, "Pavlo"));
-        users.add(new User(3,43, "Sasha"));
-        users.add(new User(4,54, "Katya"));
-        users.add(new User(5,26, "Sergiy"));
-        users.add(new User(6,14, "Denys"));
-        users.add(new User(7,12, "Petro"));
+        users.add(new User(1,11, "A"));
+        users.add(new User(2,21, "AB"));
+        users.add(new User(3,43, "ABC"));
+        users.add(new User(4,54, "ABCD"));
+        users.add(new User(5,26, "ABCDE"));
+        users.add(new User(6,14, "ABCDEF"));
+        users.add(new User(7,12, "ABCDEFG"));
 
-        Iterator<User> iterator = users.iterator();
-        while (iterator.hasNext()) {
-            Object next =  iterator.next();
-        }
+
+        System.out.println(users);
     }
 }

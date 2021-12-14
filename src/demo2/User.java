@@ -1,6 +1,6 @@
 package demo2;
 
-public class User {
+public class User implements Comparable<User> {
     int id;
     int age;
     String name;
@@ -8,7 +8,7 @@ public class User {
     public User() {
     }
 
-    public User(int id,int age, String name) {
+    public User(int id, int age, String name) {
         this.id = id;
         this.age = age;
         this.name = name;
@@ -62,8 +62,30 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                "age" + age +
+                ", age=" + age +
                 ", name='" + name + '\'' +
                 '}';
     }
+//    // // // name-
+//    @Override
+//    public int compareTo(User o) {
+//        return o.name.length() - this.name.length();
+//    }
+//
+    // // //name+
+    @Override
+    public int compareTo(User o) {
+        return this.name.length() - o.name.length();
+    }
+
+    // // // age+
+//    @Override
+//    public int compareTo(User o) {
+//        return this.age - o.age;
+//    }
+    // // // age-
+//    @Override
+//    public int compareTo(User o) {
+//        return o.age - this.age;
+//    }
 }
