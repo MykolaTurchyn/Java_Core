@@ -1,4 +1,4 @@
-package demo5;
+package demo4;
 
 public class User implements Comparable<User> {
     private int id;

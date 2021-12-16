@@ -1,4 +1,4 @@
-package demo4;
+package demo3;
 
 public class Person {
     private int id;
